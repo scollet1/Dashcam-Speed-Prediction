@@ -27,7 +27,7 @@ class Model:
 		model.add(Flatten())
 		model.add(Dense(out_shape))
 		optimizer = Adam(lr=1e-4, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0)
-		model.compile(optimizer=optimizer, loss='mse', metrics=['mse'])#, 'mae', 'mape', 'cosine'])
+		model.compile(optimizer=optimizer, loss='mse', metrics=['mse'])
 		self._model = model
 
 	def predict_generator(self, gen, steps=1):
